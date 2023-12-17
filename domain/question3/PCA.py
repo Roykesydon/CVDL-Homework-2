@@ -43,6 +43,7 @@ class PCA:
         stacked = np.hstack((gray_image, scaled_reconstructed_gray_image))
         cv2.imshow("Frame", stacked)
         cv2.waitKey(0)
+        cv2.destroyAllWindows()
 
 def main():
     image_path = './dataset/Q3/logo.jpg'

@@ -9,7 +9,7 @@ class DrawingPad(QtWidgets.QWidget):
         self.drawing = False
         self.lastPoint = QtCore.QPoint()
         self.shape = 200, 200
-        self.offset = 650, 55
+        self.offset = 750, 55
         self.image = QtGui.QPixmap(*self.shape)
         self.image.fill(QtCore.Qt.black)
 
@@ -52,6 +52,7 @@ class DrawingPad(QtWidgets.QWidget):
     def get_global_drawing_pad_as_grayscale():
         return DrawingPad.global_drawing_pad.get_drawing_as_grayscale()
 """
+from application.xml.DrawingPad import DrawingPad
 self.drawingPad = DrawingPad(self.centralwidget)
 DrawingPad.set_global_drawing_pad(self.drawingPad)
 self.drawingPad.setGeometry(QtCore.QRect(self.drawingPad.offset[0], self.drawingPad.offset[1], self.drawingPad.shape[0], self.drawingPad.shape[1]))
